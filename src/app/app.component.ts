@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import '../css/main.scss';
+var scss = require('../css/main.scss');
 
 @Component({
     selector: 'app',
+    styles: [`${scss}`],
     template: require('./app.component.html')
 })
 
