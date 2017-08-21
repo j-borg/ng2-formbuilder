@@ -11,6 +11,10 @@ export class MainComponent implements OnInit {
     constructor(private mainService: MainService) { }
 
     ngOnInit() {
-        this.list = this.mainService.list;
+        this.mainService.getList().then((result) => {
+            console.log('success', result);
+        }).catch((error) => {
+            console.log('error', error);
+        });
     }
 }
