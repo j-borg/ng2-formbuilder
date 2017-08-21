@@ -1,0 +1,17 @@
+sudo: required
+language: node_js
+
+node_js:
+  - "6.11.1"
+npm:
+  - "5.2.0"
+
+install: 
+  - npm install
+
+script:
+  - npm run lint
+  - npm test
+
+after_success:
+  - npm run semantic-release

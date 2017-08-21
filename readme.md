@@ -1,0 +1,12 @@
+## ng2-boilerplate
+- Angular2
+- Webpack
+- Gulp
+- Protractor
+- TSLint
+- Karma
+- Materialize
+- jQuery
+- Material Icons
+- Google API
+- TravisCI
