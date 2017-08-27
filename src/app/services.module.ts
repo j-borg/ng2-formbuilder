@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
-import { MainService } from './main/main.service';
-import { ApiService } from './api/api.service';
+import { FormService } from './form/form.service';
 
 @NgModule({
     providers: [
-        MainService,
-        ApiService
+        FormService
     ]
 })
 

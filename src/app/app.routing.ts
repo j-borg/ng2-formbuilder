@@ -1,13 +1,25 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { MainComponent } from './main/main.component';
+import { AppComponent } from './app.component';
+import { FormComponent } from './form/form.component';
 
 const appRoutes: Routes = [
     {
         path: '',
-        component: MainComponent
-    }
+        component: AppComponent,
+        children: [
+            {
+				path: 'user/:id',
+				component: FormComponent
+            },
+            { path: '', redirectTo: 'user/123', pathMatch: 'full' }
+        ]
+    },
+    {
+		path: '**',
+		redirectTo: '',
+		pathMatch: 'full'
+	}
 ];
 
 export const appRoutingProviders: any[] = [];

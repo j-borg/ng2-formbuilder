@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterializeDirective } from 'angular2-materialize';
 
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
+import { FormComponent } from './form/form.component';
 import { routing, appRoutingProviders } from './app.routing';
 
 import { ServicesModule } from './services.module';
@@ -14,13 +14,14 @@ import { ServicesModule } from './services.module';
     declarations: [
         MaterializeDirective,
         AppComponent,
-        MainComponent
+        FormComponent
     ],
     imports: [
         BrowserModule,
         routing,
         HttpModule,
         FormsModule,
+        ReactiveFormsModule,
         ServicesModule
     ],
     providers: [
