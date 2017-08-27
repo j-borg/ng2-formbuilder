@@ -1,12 +1,2 @@
-## ng2-boilerplate
-- Angular2
-- Webpack
-- Gulp
-- Protractor
-- TSLint
-- Karma
-- Materialize
-- jQuery
-- Material Icons
-- Google API
-- TravisCI
+## Angular2 FormBuilder service
+- Build on the @angular/forms's FormBuilder

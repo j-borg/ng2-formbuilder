@@ -9,17 +9,17 @@ const appRoutes: Routes = [
         component: AppComponent,
         children: [
             {
-				path: 'user/:id',
-				component: FormComponent
+                path: 'user/:id',
+                component: FormComponent
             },
             { path: '', redirectTo: 'user/123', pathMatch: 'full' }
         ]
     },
     {
-		path: '**',
-		redirectTo: '',
-		pathMatch: 'full'
-	}
+        path: '**',
+        redirectTo: '',
+        pathMatch: 'full'
+    }
 ];
 
 export const appRoutingProviders: any[] = [];

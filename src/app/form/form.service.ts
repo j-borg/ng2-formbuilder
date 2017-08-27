@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
-import { User, UserForm } from '../user/user.model';
-import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { User, userFormSettings } from '../user/user.model';
+import { Form } from '../form/form.model';
+import { FormBuilder } from '@angular/forms';
 
 @Injectable()
 export class FormService {
     user: any = [{
+        'id': '123',
         'name': 'John Doe',
         'age': 31,
-        'hobbies': ['fishing', 'movies'],
-        'married': false
+        'hobbies': { 'Vissen': true, 'Films': true, 'Slapen': false, 'Hardlopen': false },
+        'married': true
     } as User];
 
     formFields: any;
@@ -21,10 +23,10 @@ export class FormService {
 
     subscribe(entity: string, id: any) {
         return new Promise((resolve, reject) => {
-            let object = this[entity].filter((obj: any) => obj.id = id);
-            let userForm = new UserForm(object[0]);
+            let object = this[entity].filter((obj: any) => obj.id === id);
+            let userForm = new Form(object[0], userFormSettings);
             this.formFields = userForm.getFields();
-            resolve(this.formBuilder.group(userForm.set(Validators)));
+            resolve(userForm.set(this.formBuilder));
         });
     }
 }
