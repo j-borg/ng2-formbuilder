@@ -11,6 +11,7 @@ export class UserComponent implements OnInit, OnDestroy {
     sub: any;
     user: User;
     settings: any = userFormSettings;
+    framework: string = 'materializecss';
 
     constructor(private userService: UserService, private route: ActivatedRoute) { }
 
@@ -18,6 +19,10 @@ export class UserComponent implements OnInit, OnDestroy {
         this.sub = this.route.params
             .switchMap((params: Params) => this.userService.subscribe(params.id))
             .subscribe((result: any) => this.user = result);
+    }
+
+    saveForm($event: User) {
+        console.log($event);
     }
 
     ngOnDestroy() {

@@ -1,1 +1,1 @@
-<form-builder *ngIf="user" [entity]="user" [settings]="settings"></form-builder>
+<form-builder *ngIf="user" [entity]="user" [settings]="settings" (saveForm)="saveForm($event)"></form-builder>

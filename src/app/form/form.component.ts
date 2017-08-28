@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormService } from './form.service';
 
@@ -12,9 +12,13 @@ var scss = require('./form.component.scss');
 export class FormComponent implements OnInit {
     private form: FormGroup;
     private submitted: boolean;
+    private inputClass: string;
+    private switchClass: string;
 
     @Input() entity: any;
     @Input() settings: any;
+
+    @Output() saveForm = new EventEmitter<string>();
 
     constructor(private formService: FormService) { }
 
@@ -40,5 +44,6 @@ export class FormComponent implements OnInit {
 
     submit() {
         this.form.valid ? console.log('valid!', this.form.value) : console.log('not valid!');
+        this.saveForm.emit(this.form.value);
     }
 }

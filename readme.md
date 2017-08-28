@@ -1,4 +1,4 @@
-## Angular2 FormBuilder service
+## Angular2 FormBuilder Component
 An implementation of the @angular/forms's FormBuilder
 
 ## Supports following form fields
@@ -32,7 +32,7 @@ export const userFormSettings: any = {
 
 ### 3. Get entity from database/API or create new entity with empty object
 
-### 4. Add form builder element with entity object and settings
+### 4. Add form builder element with entity and settings @Input() and saveForm @Output()
 ```html
-<form-builder *ngIf="user" [entity]="user" [settings]="userFormSettings"></form-builder>
+<form-builder *ngIf="user" [entity]="user" [settings]="userFormSettings" (saveForm)="saveForm($event)"></form-builder>
 ```
