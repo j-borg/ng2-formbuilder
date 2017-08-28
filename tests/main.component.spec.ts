@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MainComponent } from '../src/app/main/main.component';
+import { FormComponent } from '../src/app/form/form.component';
 
 describe('HomeComponent', () => {
-    beforeEach(() => TestBed.configureTestingModule({ declarations: [MainComponent] }));
+    beforeEach(() => TestBed.configureTestingModule({ declarations: [FormComponent] }));
 
     it('should instantiate the HomeComponent', () => {
-        let fixture = TestBed.createComponent(MainComponent);
-        expect(fixture.componentInstance instanceof MainComponent).toBe(true, 'should create HomeComponent');
+        let fixture = TestBed.createComponent(FormComponent);
+        expect(fixture.componentInstance instanceof FormComponent).toBe(true, 'should create HomeComponent');
     });
 });

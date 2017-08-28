@@ -24,8 +24,8 @@ export class FormService {
     subscribe(entity: string, id: any) {
         return new Promise((resolve, reject) => {
             let object = this[entity].filter((obj: any) => obj.id === id);
-            let userForm = new Form(object[0], userFormSettings);
-            this.formFields = userForm.getFields();
+            let userForm = new Form(object.length ? object[0] : {}, userFormSettings);
+            this.formFields = userForm.entity;
             resolve(userForm.set(this.formBuilder));
         });
     }

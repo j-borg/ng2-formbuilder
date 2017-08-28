@@ -1,29 +1,33 @@
 <div *ngIf="form">
     <form [formGroup]="form">
-        <div *ngFor="let input of form.controls | keys; let i = index;">
+        <div *ngFor="let input of form.controls | keys; let i = index;" class="row">
             <div *ngIf="getType(input, 'input')" class="input-field">
                 <input name="{{input}}" type="text" formControlName="{{input}}" />
                 <label for="{{input}}" [innerHTML]="getLabel(input)"></label>
             </div>
 
-            <div *ngIf="getType(input, 'checkbox')" formGroupName="{{input}}">
-                <p *ngFor="let option of form.controls[input].controls | keys; let j = index;" class="input-field">
+            <div *ngIf="getType(input, 'checkbox')" formGroupName="{{input}}" class="input-field">
+                <label for="{{input}}" [innerHTML]="getLabel(input)"></label><br />
+                <p *ngFor="let option of form.controls[input].controls | keys; let j = index;">
                     <input name="{{option}}" id="{{option}}" type="checkbox" formControlName="{{option}}" />
                     <label for="{{option}}" [innerHTML]="option"></label>
                 </p>
             </div>
 
-            <div *ngIf="getType(input, 'boolean')"  class="switch">
-                <label>
+            <div *ngIf="getType(input, 'boolean')" class="switch row">
+                <label class="col s6" for="{{input}}" [innerHTML]="getLabel(input)"></label>
+                <label class="col s6">
                     Nee
                     <input type="checkbox" name="{{input}}" formControlName="{{input}}" />
                     <span class="lever"></span>
                     Ja
                 </label>
             </div>
+
             <small class="error" [ngClass]="{'block': !isValid(form.controls[input])}" [hidden]="isValid(form.controls[input])" [innerHTML]="getLabel(input) + ' is verplicht'"></small>
         </div>
-
-        <button class="btn" (click)="submit()">Opslaan</button>
+        <div class="row">
+            <button class="btn" (click)="submit()">Opslaan</button>
+        </div>
     </form>
 </div>

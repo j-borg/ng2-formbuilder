@@ -1,2 +1,2 @@
 ## Angular2 FormBuilder service
-- Build on the @angular/forms's FormBuilder
+- An implementation of the @angular/forms's FormBuilder

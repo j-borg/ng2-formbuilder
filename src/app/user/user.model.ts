@@ -9,8 +9,10 @@ export interface User {
 }
 
 export const userFormSettings: any = {
-    name: new FormConfig('Naam', 'input', false, true),
-    age: new FormConfig('Leeftijd', 'input', false, true),
-    hobbies: new FormConfig('Hobbies', 'checkbox', false, true),
-    married: new FormConfig('Getrouwd', 'boolean', false, false)
+    name:    new FormConfig('Naam',     'input',    false, true),
+    age:     new FormConfig('Leeftijd', 'input',    false, true),
+    married: new FormConfig('Getrouwd', 'boolean',  false, false),
+    hobbies: new FormConfig(
+        'Hobbies',  'checkbox', false, false, { 'Films': false, 'Slapen': false, 'Hardlopen': false }
+    )
 };

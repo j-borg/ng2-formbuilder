@@ -9,6 +9,10 @@ const appRoutes: Routes = [
         component: AppComponent,
         children: [
             {
+                path: 'user',
+                component: FormComponent
+            },
+            {
                 path: 'user/:id',
                 component: FormComponent
             },
