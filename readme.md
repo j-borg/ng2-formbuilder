@@ -1,8 +1,13 @@
 ## Angular2 FormBuilder service
-- An implementation of the @angular/forms's FormBuilder
+An implementation of the @angular/forms's FormBuilder
 
+### Supports following form fields
+- Input
+- Switch (boolean)
+- Radio
+- Checkbox
 
-Define a model
+### Define a model
 ```javascript
 export interface User {
     id?: string;
@@ -14,7 +19,7 @@ export interface User {
 }
 ```
 
-Create form settings for the model (label, type, disabled, required, presets)
+### Create form settings for the model (label, type, disabled, required, presets)
 ```javascript
 export const userFormSettings: any = {
     name:    new FormConfig('Naam',     'input',    false, true),
@@ -25,9 +30,9 @@ export const userFormSettings: any = {
 };
 ```
 
-Get entity from database or create new entity with empty object
+### Get entity from database or create new entity with empty object
 
-Add form builder element and add 
+### Add form builder element with entity object and settings
 ```html
 <form-builder *ngIf="user" [entity]="user" [settings]="userFormSettings"></form-builder>
 ```
