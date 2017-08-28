@@ -14,7 +14,7 @@ export interface User {
 }
 ```
 
-Create form settings for the model (label, type, disabled, required)
+Create form settings for the model (label, type, disabled, required, presets)
 ```javascript
 export const userFormSettings: any = {
     name:    new FormConfig('Naam',     'input',    false, true),
@@ -25,15 +25,9 @@ export const userFormSettings: any = {
 };
 ```
 
-Import Form class 
-```javascript
-import { Form } from '../form/form.model';
-import { FormBuilder } from '@angular/forms';
+Get entity from database or create new entity with empty object
 
-// get user
-return new Promise((resolve, reject) => {
-    let userForm = new Form(user, userFormSettings);
-    this.formFields = userForm.entity;
-    resolve(userForm.set(this.formBuilder));
-});
+Add form builder element and add 
+```html
+<form-builder *ngIf="user" [entity]="user" [settings]="userFormSettings"></form-builder>
 ```
