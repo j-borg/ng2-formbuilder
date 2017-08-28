@@ -38,5 +38,4 @@ export const userFormSettings: any = {
 ```
 
 ### 5. Result
-Inline-style: 
 ![Afbeelding](https://github.com/j-borg/ng2-formbuilder/tree/master/src/images/form-builder.png "Form Builder")
