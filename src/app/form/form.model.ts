@@ -33,15 +33,11 @@ export class Form {
 
     set(formBuilder: any) {
         let form: any = {};
-        for (var prop in this.entity) {
-            if (this.entity.hasOwnProperty(prop)) {
-                if (this.entity[prop].type === 'checkbox') {
-                    form[prop] = formBuilder.group(this.getCheckboxes(this.entity[prop].value, prop));
-                } else {
-                    form[prop] = this.setValues(this.entity, prop);
-                }
-            }
-        }
+        Object.keys(this.entity).forEach((key) => {
+            this.entity[key].type === 'checkbox'
+                ? form[key] = formBuilder.group(this.getCheckboxes(this.entity[key].value, key))
+                : form[key] = this.setValues(this.entity, key);
+        });
         return formBuilder.group(form);
     }
 
@@ -56,11 +52,7 @@ export class Form {
 
     private getCheckboxes(object: any, prop: string) {
         let checkboxes: any = {};
-        for (var check in object) {
-            if (object.hasOwnProperty(check)) {
-                checkboxes[check] = this.setValues(object, check, prop);
-            }
-        }
+        Object.keys(object).forEach((key) => checkboxes[key] = this.setValues(object, key, prop));
         return checkboxes;
     }
 }

@@ -25,9 +25,7 @@ export class FormComponent implements OnInit, OnDestroy {
         this.entity = this.router.url.split('/')[1];
         this.sub = this.route.params
             .switchMap((params: Params) => this.formService.subscribe(this.entity, params.id))
-            .subscribe((form: any) => {
-                this.form = form; console.log(form);
-            });
+            .subscribe((form: any) => this.form = form);
     }
 
     getType(field: string, type: string) {
@@ -43,11 +41,7 @@ export class FormComponent implements OnInit, OnDestroy {
     }
 
     submit() {
-        if (this.form.valid) {
-            console.log('valid!', this.form.value);
-        } else {
-            console.log('not valid!');
-        }
+        this.form.valid ? console.log('valid!', this.form.value) : console.log('not valid!');
     }
 
     ngOnDestroy() {
