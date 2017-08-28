@@ -7,8 +7,8 @@ export class UserService {
         'id': '123',
         'name': 'John Doe',
         'age': 31,
-        'mood': 'Goed',
-        'hobbies': { 'Films': true, 'Slapen': false, 'Hardlopen': false },
+        'mood': 'Good',
+        'hobbies': { 'Movies': true, 'Sleeping': false, 'Running': false },
         'married': true
     } as User];
 

@@ -1,5 +1,6 @@
 <div *ngIf="form">
     <form [formGroup]="form">
+        <h1>Angular2 FormBuilder Component</h1>
         <div *ngFor="let input of form.controls | keys; let i = index;" class="row">
             <div *ngIf="getType(input, 'input')" class="input-field">
                 <input name="{{input}}" type="text" formControlName="{{input}}" />
@@ -23,8 +24,8 @@
             </div>
 
             <div *ngIf="getType(input, 'boolean')" class="switch row">
-                <label class="col s6" for="{{input}}" [innerHTML]="getLabel(input)"></label>
-                <label class="col s6">
+                <label class="col s3" for="{{input}}" [innerHTML]="getLabel(input)"></label>
+                <label class="col s9">
                     Nee
                     <input type="checkbox" name="{{input}}" formControlName="{{input}}" />
                     <span class="lever"></span>

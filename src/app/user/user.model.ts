@@ -10,10 +10,10 @@ export interface User {
 }
 
 export const userFormSettings: any = {
-    name:       new FormConfig('Naam',      'input',    false, true),
-    age:        new FormConfig('Leeftijd',  'input',    false, true),
-    married:    new FormConfig('Getrouwd',  'boolean',  false, false),
-    mood:       new FormConfig('Humeur',    'radio',    false, false, { 'Goed': false, 'Neutraal': false, 'Slecht': false }),
+    name:       new FormConfig('Name',      'input',    false, true),
+    age:        new FormConfig('Age',  'input',    false, true),
+    married:    new FormConfig('Married',  'boolean',  false, false),
+    mood:       new FormConfig('Mood',    'radio',    false, false, { 'Good': false, 'Neutral': false, 'Bad': false }),
     hobbies:    new FormConfig('Hobbies',   'checkbox', false, false,
-        { 'Films': false, 'Slapen': false, 'Hardlopen': false })
+        { 'Movies': false, 'Sleeping': false, 'Running': false })
 };

@@ -25,8 +25,8 @@ export const userFormSettings: any = {
     name:    new FormConfig('Name',     'input',    false, true),
     age:     new FormConfig('Age',      'input',    false, true),
     married: new FormConfig('Married',  'boolean',  false, false),
-    mood:    new FormConfig('Mood',     'radio',    false, false, { 'Goed': false, 'Neutraal': false, 'Slecht': false}),
-    hobbies: new FormConfig('Hobbies',  'checkbox', false, false, { 'Films': false, 'Slapen': false, 'Hardlopen': false })
+    mood:    new FormConfig('Mood',     'radio',    false, false, { 'Good': false, 'Neutral': false, 'Bad': false}),
+    hobbies: new FormConfig('Hobbies',  'checkbox', false, false, { 'Movies': false, 'Sleeping': false, 'Running': false })
 };
 ```
 
@@ -36,3 +36,6 @@ export const userFormSettings: any = {
 ```html
 <form-builder *ngIf="user" [entity]="user" [settings]="userFormSettings" (saveForm)="saveForm($event)"></form-builder>
 ```
+
+### 5. Result
+![alt text](https://github.com/j-borg/ng2-formbuilder/tree/master/src/images/form-builder.png "Form Builder result")
