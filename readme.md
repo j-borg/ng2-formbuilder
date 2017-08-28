@@ -1,13 +1,13 @@
 ## Angular2 FormBuilder service
 An implementation of the @angular/forms's FormBuilder
 
-### Supports following form fields
+## Supports following form fields
 - Input
 - Switch (boolean)
 - Radio
 - Checkbox
 
-### Define a model
+### 1. Define a model
 ```javascript
 export interface User {
     id?: string;
@@ -19,20 +19,20 @@ export interface User {
 }
 ```
 
-### Create form settings for the model (label, type, disabled, required, presets)
+### 2. Create form settings for the model (label, type, disabled, required, presets)
 ```javascript
 export const userFormSettings: any = {
-    name:    new FormConfig('Naam',     'input',    false, true),
-    age:     new FormConfig('Leeftijd', 'input',    false, true),
-    married: new FormConfig('Getrouwd', 'boolean',  false, false),
-    mood:    new FormConfig('Humeur',   'radio',    false, false, { 'Goed': false, 'Neutraal': false, 'Slecht': false}),
+    name:    new FormConfig('Name',     'input',    false, true),
+    age:     new FormConfig('Age',      'input',    false, true),
+    married: new FormConfig('Married',  'boolean',  false, false),
+    mood:    new FormConfig('Mood',     'radio',    false, false, { 'Goed': false, 'Neutraal': false, 'Slecht': false}),
     hobbies: new FormConfig('Hobbies',  'checkbox', false, false, { 'Films': false, 'Slapen': false, 'Hardlopen': false })
 };
 ```
 
-### Get entity from database or create new entity with empty object
+### 3. Get entity from database/API or create new entity with empty object
 
-### Add form builder element with entity object and settings
+### 4. Add form builder element with entity object and settings
 ```html
 <form-builder *ngIf="user" [entity]="user" [settings]="userFormSettings"></form-builder>
 ```
