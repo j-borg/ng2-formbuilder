@@ -12,8 +12,6 @@ var scss = require('./form.component.scss');
 export class FormComponent implements OnInit {
     private form: FormGroup;
     private submitted: boolean;
-    private inputClass: string;
-    private switchClass: string;
 
     @Input() entity: any;
     @Input() settings: any;

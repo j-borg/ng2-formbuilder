@@ -11,7 +11,6 @@ export class UserComponent implements OnInit, OnDestroy {
     sub: any;
     user: User;
     settings: any = userFormSettings;
-    framework: string = 'materializecss';
 
     constructor(private userService: UserService, private route: ActivatedRoute) { }
 
