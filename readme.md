@@ -38,4 +38,5 @@ export const userFormSettings: any = {
 ```
 
 ### 5. Result
-![alt text](https://github.com/j-borg/ng2-formbuilder/tree/master/src/images/form-builder.png "Form Builder result")
+![alt text][logo]
+[logo]: https://github.com/j-borg/ng2-formbuilder/tree/master/src/images/form-builder.png
