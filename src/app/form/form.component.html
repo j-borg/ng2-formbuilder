@@ -14,6 +14,14 @@
                 </p>
             </div>
 
+            <div *ngIf="getType(input, 'radio')" class="input-field">
+                <label for="{{input}}" [innerHTML]="getLabel(input)"></label><br />
+                <p *ngFor="let option of getRadio(input) | keys; let j = index;">
+                    <input type="radio" id="{{option}}" name="{{input}}" [value]="option" formControlName="{{input}}" />
+                    <label for="{{option}}" [innerHTML]="option"></label>
+                </p>
+            </div>
+
             <div *ngIf="getType(input, 'boolean')" class="switch row">
                 <label class="col s6" for="{{input}}" [innerHTML]="getLabel(input)"></label>
                 <label class="col s6">

@@ -25,11 +25,15 @@ export class FormComponent implements OnInit, OnDestroy {
         this.entity = this.router.url.split('/')[1];
         this.sub = this.route.params
             .switchMap((params: Params) => this.formService.subscribe(this.entity, params.id))
-            .subscribe((form: any) => this.form = form);
+            .subscribe((form: any) => { this.form = form; console.log(this.form) });
     }
 
     getType(field: string, type: string) {
         return this.formService.fields[field].type === type;
+    }
+
+    getRadio(field: string) {
+        return this.formService.fields[field].preset;
     }
 
     getLabel(field: string) {

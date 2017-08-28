@@ -9,7 +9,8 @@ export class FormService {
         'id': '123',
         'name': 'John Doe',
         'age': 31,
-        'hobbies': { 'Vissen': true, 'Films': true, 'Slapen': false, 'Hardlopen': false },
+        'mood': 'Goed',
+        'hobbies': { 'Films': true, 'Slapen': false, 'Hardlopen': false },
         'married': true
     } as User];
 
