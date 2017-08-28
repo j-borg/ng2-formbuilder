@@ -1,7 +1,7 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
+import { UserComponent } from './user/user.component';
 
 const appRoutes: Routes = [
     {
@@ -10,11 +10,11 @@ const appRoutes: Routes = [
         children: [
             {
                 path: 'user',
-                component: FormComponent
+                component: UserComponent
             },
             {
                 path: 'user/:id',
-                component: FormComponent
+                component: UserComponent
             },
             { path: '', redirectTo: 'user/123', pathMatch: 'full' }
         ]

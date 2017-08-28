@@ -14,7 +14,5 @@ export const userFormSettings: any = {
     age:     new FormConfig('Leeftijd', 'input',    false, true),
     married: new FormConfig('Getrouwd', 'boolean',  false, false),
     mood:    new FormConfig('Humeur',   'radio', false, false, { 'Goed': false, 'Neutraal': false, 'Slecht': false}),
-    hobbies: new FormConfig(
-        'Hobbies',  'checkbox', false, false, { 'Films': false, 'Slapen': false, 'Hardlopen': false }
-    )
+    hobbies: new FormConfig('Hobbies',  'checkbox', false, false, { 'Films': false, 'Slapen': false, 'Hardlopen': false })
 };
