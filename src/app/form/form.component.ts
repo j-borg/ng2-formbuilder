@@ -19,7 +19,7 @@ export class FormComponent implements OnInit {
     constructor(private formService: FormService) { }
 
     ngOnInit() {
-        this.form = this.formService.init(this.entity, this.settings)
+        this.form = this.formService.init(this.entity, this.settings);
     }
 
     getType(field: string, type: string) {
