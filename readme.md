@@ -3,9 +3,10 @@ An implementation of the @angular/forms's FormBuilder
 
 ## Supports following form fields
 - Input
-- Switch (boolean)
+- Switch
 - Radio
 - Checkbox
+- Upload (FileStack)
 
 ### 1. Define a model
 ```javascript
@@ -34,12 +35,10 @@ export const userFormSettings: any = {
 };
 ```
 
-### 3. Get entity from database/API or create new entity with empty object
-
-### 4. Add form builder element with entity and settings @Input() and saveForm @Output()
+### 3. Add form builder element with entity from db/api and settings @Input() and saveForm @Output()
 ```html
-<form-builder *ngIf="user" [entity]="user" [settings]="userFormSettings" (saveForm)="saveForm($event)"></form-builder>
+<form-builder [entity]="user" [settings]="userFormSettings" (saveForm)="saveForm($event)"></form-builder>
 ```
 
-### 5. Result
+### 4. Result
 ![Afbeelding](src/images/form-builder.png)
