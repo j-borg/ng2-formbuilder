@@ -7,6 +7,7 @@ import { MaterializeDirective } from 'angular2-materialize';
 /* Components */
 import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
+import { ImageUploadComponent } from './form/imageUpload/imageUpload.component';
 import { UserComponent } from './user/user.component';
 import { routing, appRoutingProviders } from './app.routing';
 
@@ -21,6 +22,7 @@ import { ObjectKeysPipe } from './pipes/objectKeys.pipe';
         MaterializeDirective,
         AppComponent,
         FormComponent,
+        ImageUploadComponent,
         UserComponent,
         ObjectKeysPipe
     ],

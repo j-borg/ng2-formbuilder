@@ -6,6 +6,8 @@ form {
     padding: 50px;
     border: 1px solid #eee;
 
+    .row { }
+
     p:last-child {
         margin-bottom: 15px;
     }
@@ -16,16 +18,40 @@ form {
         font-size: 32px;
     }
 
-    small { color: red; }
+    small { 
+        color: red;
+        margin-top: -10px;
+        display: block;
+    }
+
+    .input-field {
+        &.upload {
+            margin-top: 0;
+        }
+        input[type="radio"] + label, input[type="checkbox"] + label {
+            top: auto;
+        }
+        > label {
+            color: #333;
+            position: relative;
+            top: auto;
+            line-height: 0;
+        }
+        > p { margin-bottom: 0; }
+    }
 
     .switch {
-        > label.col {
+        margin: 0;
+        label:first-of-type {
+            color: #333;
+            display: block;
+            margin-bottom: 15px;
             font-size: 1rem;
             padding-left: 0;
         }
     }
 
     .btn {
-        margin-top: 30px;
+        margin-top: 15px;
     }
 }

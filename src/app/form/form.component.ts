@@ -40,6 +40,10 @@ export class FormComponent implements OnInit {
         return field.valid || field.disabled || (field.pristine && !this.submitted);
     }
 
+    imageUploaded($event: any, input: string) {
+        this.form.controls[input].setValue($event);
+    }
+
     submit() {
         this.form.valid ? console.log('valid!', this.form.value) : console.log('not valid!');
         this.saveForm.emit(this.form.value);
