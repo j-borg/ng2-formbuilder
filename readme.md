@@ -1,6 +1,8 @@
 ## Angular2 FormBuilder Component
 An implementation of the @angular/forms's FormBuilder
 
+https://www.npmjs.com/package/@gdn/form-builder
+
 ## Supports following form fields
 - Input
 - Switch
