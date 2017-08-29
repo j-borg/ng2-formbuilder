@@ -1,14 +1,14 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-var scss = require('./imageUpload.scss');
+var scss = require('./upload.scss');
 declare var filepicker: any;
 
 @Component({
-    selector: 'image-upload',
+    selector: 'upload',
     styles: [`${scss}`],
-    template: require('./imageUpload.component.html')
+    template: require('./upload.component.html')
 })
 
-export class ImageUploadComponent {
+export class UploadComponent {
     @Input() content: any;
     @Output() imageUploaded = new EventEmitter<string>();
 

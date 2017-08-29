@@ -19,7 +19,7 @@
 
             <div *ngIf="getType(input, 'upload')" class="input-field upload">
                 <label [innerHTML]="getLabel(input)"></label>
-                <image-upload (imageUploaded)="imageUploaded($event, input)" [content]="input._value"></image-upload>
+                <upload (imageUploaded)="imageUploaded($event, input)" [content]="input._value"></upload>
             </div>
 
             <div *ngIf="getType(input, 'radio')" class="input-field">

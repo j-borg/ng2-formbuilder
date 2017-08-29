@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 /* Components */
 import { FormComponent } from './form.component';
-import { ImageUploadComponent } from '../imageUpload/imageUpload.component';
+import { UploadComponent } from '../upload/upload.component';
 
 /* Services */
 import { FormService } from './form.service';
@@ -15,7 +15,7 @@ import { ObjectKeysPipe } from '../pipes/objectKeys.pipe';
 @NgModule({
     declarations: [
         FormComponent,
-        ImageUploadComponent,
+        UploadComponent,
         ObjectKeysPipe
     ],
     imports: [
@@ -28,7 +28,7 @@ import { ObjectKeysPipe } from '../pipes/objectKeys.pipe';
     ],
     exports: [
         FormComponent,
-        ImageUploadComponent,
+        UploadComponent,
         ObjectKeysPipe
     ],
     bootstrap: [
