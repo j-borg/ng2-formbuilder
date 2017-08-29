@@ -36,6 +36,9 @@ export const userFormSettings: any = {
 ```
 
 ### 3. Add form builder element with entity from db/api and settings @Input() and saveForm @Output()
+
+If the entity is an empty object the form be empty for a new document. If the entity has key, the form will be filled in and you can edit the existing entity. 
+
 ```html
 <form-builder [entity]="user" [settings]="userFormSettings" (saveForm)="saveForm($event)"></form-builder>
 ```
