@@ -1,19 +1,19 @@
 import { Validators } from '@angular/forms';
 
 export class FormConfig {
-    label: string;
-    type: string;
-    disabled: boolean;
-    required: boolean;
-    preset: any;
+    private label: string;
+    private type: string;
+    private disabled: boolean;
+    private required: boolean;
+    private presets?: any;
 
-    constructor(label: string, type: string, disabled: boolean, required: boolean, preset?: any) {
-        this.label = label;
-        this.type = type;
-        this.disabled = disabled;
-        this.required = required;
-        if (preset) {
-            this.preset = preset;
+    constructor(settings: any) {
+        this.label = settings.label;
+        this.type = settings.type;
+        this.disabled = settings.disabled;
+        this.required = settings.required;
+        if (settings.preset) {
+            this.presets = settings.presets;
         }
     }
 }
@@ -25,9 +25,8 @@ export class Form {
         delete entity.id;
         this.entity = {};
         Object.keys(formSettings).forEach((key) => {
-            let values = formSettings[key];
-            values.value = entity[key] || formSettings[key].preset || '';
-            this.entity[key] = values;
+            formSettings[key].value = entity[key] || formSettings[key].presets || '';
+            this.entity[key] = formSettings[key];
         });
     }
 

@@ -33,6 +33,10 @@ export class FormComponent implements OnChanges {
         this.form = this.formService.init(this.entity, this.settings);
     }
 
+    hasValues(object: any) {
+        return Object.keys(object).length;
+    }
+
     getType(field: string, type: string) {
         return this.formService.fields[field].type === type;
     }

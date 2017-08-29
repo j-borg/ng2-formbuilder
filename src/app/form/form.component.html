@@ -1,6 +1,6 @@
 <div *ngIf="form">
     <form [formGroup]="form">
-        <h1>Angular2 FormBuilder Component</h1>
+        <h1 [innerHTML]="hasValues(entity) ? 'Bewerken' : 'Nieuw'"></h1>
         <div *ngFor="let input of form.controls | keys; let i = index;" class="row">
             <div *ngIf="getType(input, 'input')" class="input-field">
                 <p>
