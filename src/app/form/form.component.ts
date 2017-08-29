@@ -42,7 +42,7 @@ export class FormComponent implements OnChanges {
     }
 
     getRadio(field: string) {
-        return this.formService.fields[field].preset;
+        return this.formService.fields[field].presets;
     }
 
     getLabel(field: string) {

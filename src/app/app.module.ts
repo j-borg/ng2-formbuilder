@@ -1,37 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterializeDirective } from 'angular2-materialize';
+import { FormBuilderModule } from './form/form.module';
 
 /* Components */
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
-import { ImageUploadComponent } from './form/imageUpload/imageUpload.component';
 import { UserComponent } from './user/user.component';
 import { routing, appRoutingProviders } from './app.routing';
 
 /* Services */
 import { ServicesModule } from './services.module';
 
-/* Pipes */
-import { ObjectKeysPipe } from './pipes/objectKeys.pipe';
-
 @NgModule({
     declarations: [
         MaterializeDirective,
         AppComponent,
-        FormComponent,
-        ImageUploadComponent,
-        UserComponent,
-        ObjectKeysPipe
+        UserComponent
     ],
     imports: [
         BrowserModule,
         routing,
         HttpModule,
-        FormsModule,
-        ReactiveFormsModule,
+        FormBuilderModule,
         ServicesModule
     ],
     providers: [

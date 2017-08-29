@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Form } from '../form/form.model';
+import { Form } from './form.model';
 import { FormBuilder } from '@angular/forms';
 
 @Injectable()

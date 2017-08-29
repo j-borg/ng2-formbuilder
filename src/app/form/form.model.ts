@@ -12,7 +12,7 @@ export class FormConfig {
         this.type = settings.type;
         this.disabled = settings.disabled;
         this.required = settings.required;
-        if (settings.preset) {
+        if (settings.presets) {
             this.presets = settings.presets;
         }
     }
@@ -34,7 +34,7 @@ export class Form {
         let form: any = {};
         Object.keys(this.entity).forEach((key) => {
             this.entity[key].type === 'checkbox'
-                ? form[key] = formBuilder.group(this.getCheckboxes(this.entity[key].value, key))
+                ? form[key] = formBuilder.group(this.getMultiple(this.entity[key].value, key))
                 : form[key] = this.setValues(this.entity, key);
         });
         return formBuilder.group(form);
@@ -49,7 +49,7 @@ export class Form {
         return field;
     }
 
-    private getCheckboxes(object: any, prop: string) {
+    private getMultiple(object: any, prop: string) {
         let checkboxes: any = {};
         Object.keys(object).forEach((key) => checkboxes[key] = this.setValues(object, key, prop));
         return checkboxes;
