@@ -1,1 +1,1 @@
-export * from './src/form.module';
+export * from './src/app/form/form.module';
