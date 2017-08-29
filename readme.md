@@ -1,5 +1,5 @@
 ## Angular2 FormBuilder Component
-An implementation of the @angular/forms's FormBuilder
+Module with implementation of the @angular/forms's FormBuilder
 
 https://www.npmjs.com/package/@gdn/form-builder
 
