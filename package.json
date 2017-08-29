@@ -17,7 +17,7 @@
 	},
 	"scripts": {
 		"lint": "tslint \"src/**/*.ts\"",
-		"prepublish": "tsc",
+		"prepublish": "tsc && ngc",
 		"watch": "tsc -w "
 	},
 	"dependencies": {
@@ -39,6 +39,7 @@
 		"zone.js": "^0.7.2"
 	},
 	"devDependencies": {
+		"@angular/compiler-cli": "^4.3.6",
 		"@types/jasmine": "2.5.45",
 		"@types/node": "^6.0.78",
 		"@types/protractor": "^1.5.20",

@@ -6,7 +6,7 @@ var scss = require('./form.component.scss');
 
 @Component({
     selector: 'form-builder',
-    templateUrl: './form.component.html',
+    template: require('./form.component.html'),
     styles: [`${scss}`]
 })
 export class FormComponent implements OnChanges {

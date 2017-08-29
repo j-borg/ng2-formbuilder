@@ -5,7 +5,7 @@ declare var filepicker: any;
 @Component({
     selector: 'image-upload',
     styles: [`${scss}`],
-    templateUrl: './imageUpload.component.html'
+    template: require('./imageUpload.component.html')
 })
 
 export class ImageUploadComponent {
