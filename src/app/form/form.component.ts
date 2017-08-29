@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChange } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormService } from './form.service';
 
@@ -9,7 +9,7 @@ var scss = require('./form.component.scss');
     template: require('./form.component.html'),
     styles: [`${scss}`]
 })
-export class FormComponent implements OnInit {
+export class FormComponent implements OnChanges {
     private form: FormGroup;
     private submitted: boolean;
 
@@ -20,7 +20,16 @@ export class FormComponent implements OnInit {
 
     constructor(private formService: FormService) { }
 
-    ngOnInit() {
+    ngOnChanges(changes: { [propKey: string]: SimpleChange }) {
+        for (let propName in changes) {
+            this[propName] = changes[propName].currentValue;
+        }
+        if (this.entity && this.settings) {
+            this.initForm();
+        }
+    }
+
+    initForm() {
         this.form = this.formService.init(this.entity, this.settings);
     }
 
