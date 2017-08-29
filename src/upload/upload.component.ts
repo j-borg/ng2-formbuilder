@@ -5,7 +5,12 @@ declare var filepicker: any;
 @Component({
     selector: 'upload',
     styles: [`${scss}`],
-    template: require('./upload.component.html')
+    template: `<div class="waves-effect waves-light btn" type="button" (click)="selectImage()">
+    <span>Upload afbeelding</span>
+</div>
+<a class="preview-image" *ngIf="content" target="_blank" href="{{content}}">Bekijk afbeelding</a>
+
+`
 })
 
 export class UploadComponent {
