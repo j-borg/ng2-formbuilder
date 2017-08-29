@@ -1,7 +1,11 @@
 {
-	"name": "angular-boilerplater",
+	"name": "@gdn/form-builder",
 	"version": "0.0.1",
-	"description": "Angular2 Boilerplate with Gulp and Webpack",
+	"description": "Angular2 module based on the Angular2 FormBuilder",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GuidionDev/FormBuilderModule"
+	},
 	"keywords": [
 		"angular2",
 		"typescript",
@@ -13,11 +17,8 @@
 	},
 	"scripts": {
 		"lint": "tslint \"src/**/*.ts\"",
-		"postinstall": "webdriver-manager update",
-		"e2e": "protractor",
-		"start": "gulp serve",
-		"build": "gulp build",
-		"test": "karma start"
+		"prepublish": "tsc",
+		"watch": "tsc -w "
 	},
 	"dependencies": {
 		"@angular/common": "~2.4.0",
@@ -76,5 +77,10 @@
 		"webpack-dev-server": "^1.14.1",
 		"webpack-merge": "^0.14.0"
 	},
-	"private": true
+	"private": true,
+	"bugs": {
+		"url": "https://github.com/GuidionDev/FormBuilderModule/issues"
+	},
+	"homepage": "https://github.com/GuidionDev/FormBuilderModule#readme",
+	"author": "Jille Borg"
 }

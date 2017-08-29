@@ -25,3 +25,6 @@ target
 .idea
 .vscode
 .editorconfig
+
+.npmrc
+.npmignore
