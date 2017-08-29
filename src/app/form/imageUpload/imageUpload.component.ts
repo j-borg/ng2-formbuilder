@@ -12,8 +12,10 @@ export class ImageUploadComponent {
     @Input() content: any;
     @Output() imageUploaded = new EventEmitter<string>();
 
+    private key: string = process.env.FILEPICKER;
+
     constructor() {
-        filepicker.setKey('AnmxqBJPfTyWWoJzLC8cEz');
+        filepicker.setKey(this.key);
     }
 
     selectImage() {
