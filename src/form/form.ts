@@ -23,6 +23,7 @@ export class Form {
 
     constructor(entity: any, formSettings: any) {
         delete entity.id;
+        delete entity._id;
         this.entity = {};
         Object.keys(formSettings).forEach((key) => {
             formSettings[key].value = entity[key] || formSettings[key].presets || '';
