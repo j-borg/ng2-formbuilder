@@ -16,7 +16,7 @@
 		"npm": "5.2.0"
 	},
 	"scripts": {
-		"lint": "tslint \"src/**/*.ts\"",
+		"lint": "tslint \"src/form/**/*.ts\"",
 		"prepublish": "tsc",
 		"watch": "tsc -w "
 	},

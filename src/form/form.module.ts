@@ -4,13 +4,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 /* Components */
 import { FormComponent } from './form.component';
-import { UploadComponent } from '../upload/upload.component';
+import { UploadComponent } from './upload/upload.component';
 
 /* Services */
 import { FormService } from './form.service';
 
 /* Pipes */
-import { ObjectKeysPipe } from '../pipes/objectKeys.pipe';
+import { ObjectKeysPipe } from './pipes/objectKeys.pipe';
 
 @NgModule({
     declarations: [

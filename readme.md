@@ -46,4 +46,4 @@ If the entity is an empty object the form be empty for a new document. If the en
 ```
 
 ### 4. Result
-![Afbeelding](src/images/form-builder.png)
+![Afbeelding](src/app/images/form-builder.png)
