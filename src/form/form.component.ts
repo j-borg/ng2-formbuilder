@@ -47,7 +47,8 @@ var scss = require('./form.component.scss');
                 </label>
             </div>
 
-            <small class="error" [ngClass]="{'block': !isValid(form.controls[input])}" [hidden]="isValid(form.controls[input])" [innerHTML]="getLabel(input) + ' is verplicht'"></small>
+            <small class="error" [ngClass]="{'block': !isValid(form.controls[input])}"
+                [hidden]="isValid(form.controls[input])" [innerHTML]="getLabel(input) + ' is verplicht'"></small>
         </div>
         <div class="row">
             <button class="btn" (click)="submit()">Opslaan</button>
