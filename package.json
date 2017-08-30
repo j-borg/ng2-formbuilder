@@ -1,6 +1,6 @@
 {
 	"name": "@gdn/form-builder",
-	"version": "0.0.12",
+	"version": "0.0.13",
 	"description": "Angular2 module based on the Angular2 FormBuilder",
 	"repository": {
 		"type": "git",
