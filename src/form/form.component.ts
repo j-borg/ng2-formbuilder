@@ -8,7 +8,6 @@ var scss = require('./form.component.scss');
     selector: 'form-builder',
     template: `<div *ngIf="form">
     <form [formGroup]="form">
-        <h1 [innerHTML]="hasValues(entity) ? 'Bewerken' : 'Nieuw'"></h1>
         <div *ngFor="let input of form.controls | keys; let i = index;" class="row">
             <div *ngIf="getType(input, 'input')" class="input-field">
                 <p>
@@ -79,7 +78,7 @@ export class FormComponent implements OnChanges {
     }
 
     initForm() {
-        this.form = this.formService.init(this.entity, this.settings);
+        this.form = this.formService.init(Object.assign({}, this.entity), this.settings);
     }
 
     hasValues(object: any) {
